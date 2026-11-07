@@ -1,0 +1,139 @@
+@import './variables.css';
+
+.admin-dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  margin-bottom: var(--space-m);
+}
+
+.admin-dashboard__subtitle {
+  margin-bottom: 0;
+}
+
+.admin-dashboard__tabs {
+  margin-bottom: var(--space-m);
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-panel {
+  margin-bottom: var(--space-m);
+}
+
+.admin-panel__alert {
+  margin-bottom: var(--space-m);
+}
+
+.admin-panel__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  max-width: 420px;
+}
+
+.admin-panel__form-row {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.admin-panel__form-row > * {
+  flex: 1;
+}
+
+.admin-panel__days-label {
+  color: var(--text-soft);
+  font-size: 0.875rem;
+}
+
+.admin-panel__days-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.admin-panel__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  margin-bottom: var(--space-m);
+}
+
+.admin-panel__filter-select {
+  min-width: 200px;
+}
+
+.admin-panel__filter-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.admin-panel__table-container {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.admin-panel__empty-row {
+  text-align: center;
+  color: var(--text-soft);
+}
+
+.admin-panel__row-actions {
+  display: inline-flex;
+  gap: var(--space-s);
+}
+
+.admin-panel__status-chip--active {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.admin-panel__status-chip--inactive {
+  background-color: var(--border);
+  color: var(--text-soft);
+}
+
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.stats-grid .admin-panel {
+  margin-bottom: 0;
+}
+
+.admin-panel__trend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  margin-bottom: var(--space-m);
+}
+
+.admin-panel__trend-title {
+  margin-bottom: 0;
+}
+
+.department-dialog__title {
+  font-weight: 700;
+}
+
+.department-dialog__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  padding-top: var(--space-s);
+}
+
+@media (max-width: 600px) {
+  .admin-panel__form-row {
+    flex-direction: column;
+  }
+
+  .admin-panel__filter-select, .admin-panel__filter-search {
+    min-width: 100%;
+  }
+}
