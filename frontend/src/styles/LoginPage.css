@@ -1,0 +1,35 @@
+@import './variables.css';
+
+.login__card {
+  text-align: center;
+}
+
+.login__icon-wrapper {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-m);
+  border-radius: 50%;
+  background-color: var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__icon {
+  color: var(--blue-dark);
+}
+
+.login__alert {
+  margin-bottom: var(--space-m);
+  text-align: left;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.login__submit {
+  padding: 10px;
+}
