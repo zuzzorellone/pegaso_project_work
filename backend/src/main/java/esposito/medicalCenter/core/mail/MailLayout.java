@@ -2,12 +2,13 @@ package esposito.medicalCenter.core.mail;
 
 import org.springframework.web.util.HtmlUtils;
 
-import lombok.NoArgsConstructor;
-
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@NoArgsConstructor 
+/**
+ * Shared HTML layout of the emails sent to patients. Styles are inline because most email
+ * clients ignore style sheets.
+ */
 public final class MailLayout {
 
     public static final String BRAND = "Salute e Benessere Lazio";
@@ -18,6 +19,9 @@ public final class MailLayout {
     private static final String BORDER = "#D6E4F0";
     private static final String TEXT = "#1F2D3D";
     private static final String TEXT_SOFT = "#5B6B7C";
+
+    private MailLayout() {
+    }
 
     public static String escape(String text) {
         return HtmlUtils.htmlEscape(text, "UTF-8");
