@@ -1,0 +1,65 @@
+### APPOINTMENTS - GET ALL
+GET http://localhost:8080//api/v1/appointments
+Accept: application/json
+
+### APPOINTMENTS - GET ONE
+GET http://localhost:8080/api/v1/appointments/1
+Accept: application/json
+
+### APPOINTMENTS - CREATE NEW ONE
+POST http://localhost:8080/api/v1/appointments
+Content-Type: application/json
+
+{
+  "patient": {
+    "name": "Chricro",
+    "surname": "Crochri",
+    "email": "chrui.chroi@gmail.com",
+    "telephoneNumber": "31231231231"
+  },
+  "appointmentDate": "2026-03-10T13:00:00",
+  "medicalExaminationType": "RADIOGRAPHY"
+}
+
+### MEDICAL EXAMINATION TYPE - GET ALL
+GET http://localhost:8080//api/v1/medical-examination-types
+Accept: application/json
+
+### MEDICAL EXAMINATION TYPE - CREATE NEW ONE
+POST http://localhost:8080//api/v1/medical-examination-types
+Content-Type: application/json
+
+{
+    "name": "BLOOD_TEST",
+    "description": "Analisi del sangue",
+    "openTime": "09:00",
+    "closeTime": "10:00",
+    "duration": 30,
+    "daysOfWeek": ["FRIDAY"]
+}
+
+### REPORT - CREATE NEW ONE
+POST http://localhost:8080/api/v1/reports?appointmentId=7
+Content-Type: multipart/form-data; boundary=MioBoundary
+
+--MioBoundary
+Content-Disposition: form-data; name="file"; filename="sample.pdf"
+Content-Type: application/pdf
+
+< ./sample.pdf
+--MioBoundary--
+
+### REPORT - GET ALL BY APPOINTMENT
+GET http://localhost:8080/api/v1/reports?appointmentId=7
+Accept: application/json
+
+### REPORT - GENERATE NEW TOKEN
+POST http://localhost:8080/api/v1/reports/1/generate-token
+Accept: application/json
+
+### PUBLIC REPORT - GET ALL BY APPOINTMENT
+GET http://localhost:8080/api/v1/public/reports
+Accept: application/json
+
+### PUBLIC REPORT - GET ALL BY APPOINTMENT
+GET http://localhost:8080/api/v1/public/reports/download?token=df1110af-c0e0-47ba-aae0-1b6ba9a6b191
