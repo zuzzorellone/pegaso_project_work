@@ -1,0 +1,162 @@
+@import './variables.css';
+
+.doctor-dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  margin-bottom: var(--space-l);
+}
+
+.doctor-dashboard__subtitle {
+  margin-bottom: 0;
+}
+
+.doctor-dashboard__loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-l);
+}
+
+.dashboard-action-alert {
+  margin-bottom: var(--space-m);
+}
+
+.doctor-dashboard__section {
+  margin-bottom: var(--space-l);
+}
+
+.doctor-dashboard__section-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: var(--space-m);
+  padding-left: var(--space-s);
+  border-left: 4px solid var(--blue);
+}
+
+.doctor-dashboard__section-title--past {
+  border-left-color: var(--border);
+}
+
+.doctor-dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-m);
+}
+
+.doctor-dashboard__empty {
+  color: var(--text-soft);
+}
+
+.appt-card {
+  padding: var(--space-m);
+}
+
+.appt-card--past {
+  background-color: var(--bg);
+}
+
+.appt-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-s);
+}
+
+.appt-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-s);
+  min-width: 0;
+}
+
+.appt-card__type-chip, .appt-card__status-chip--confirmed {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  font-weight: 600;
+}
+
+.appt-card__type-chip--past {
+  background-color: var(--border);
+  color: var(--text-soft);
+}
+
+.appt-card__status-chip--waiting, .appt-card__report-chip {
+  background-color: var(--warning-light);
+  color: var(--warning);
+}
+
+.appt-card__status-chip--completed, .appt-card__report-chip--uploaded {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.appt-card__datetime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.appt-card__datetime-icon {
+  font-size: 18px;
+  color: var(--blue-dark);
+}
+
+.appt-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-s);
+}
+
+.appt-card__icon-btn {
+  color: var(--blue-dark);
+}
+
+.appt-card__divider {
+  margin: var(--space-m) 0;
+}
+
+.appt-card__patient {
+  display: flex;
+  gap: var(--space-s);
+}
+
+.appt-card__patient-icon {
+  color: var(--text-soft);
+}
+
+.appt-card__patient-name {
+  font-weight: 600;
+}
+
+.appt-card__patient-phone, .appt-card__patient-cf {
+  color: var(--text-soft);
+  font-size: 0.875rem;
+}
+
+.upload-dialog__title {
+  font-weight: 700;
+}
+
+.upload-dialog__hint, .upload-dialog__alert {
+  margin-bottom: var(--space-m);
+}
+
+.upload-dialog__hint {
+  color: var(--text-soft);
+}
+
+.upload-dialog__file-btn {
+  width: 100%;
+  padding: var(--space-m);
+  border-style: dashed;
+}
+
+.upload-dialog__file-btn--selected {
+  border-style: solid;
+  background-color: var(--blue-light);
+}
