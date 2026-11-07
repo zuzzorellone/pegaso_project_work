@@ -1,0 +1,22 @@
+:root {
+  --blue: #5AA8E6;
+  --blue-dark: #2A74AD;
+  --blue-light: #EAF4FC;
+  --bg: #F5FAFE;
+  --white: #FFFFFF;
+  --border: #D6E4F0;
+  --text: #1F2D3D;
+  --text-soft: #5B6B7C;
+
+  --success: #2E7D32;
+  --success-light: #E8F5E9;
+  --warning: #9A5B00;
+  --warning-light: #FFF4E0;
+
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 32px;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(31, 45, 61, 0.06);
+  --font: 'Roboto', sans-serif;
+}

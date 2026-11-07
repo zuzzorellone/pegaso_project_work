@@ -1,0 +1,62 @@
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--blue-dark);
+  text-decoration: none;
+}
+
+/* Elementi comuni a più pagine */
+
+.login, .report-page, .booking-page, .doctor-dashboard, .admin-dashboard {
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-l);
+}
+
+.login__card, .report-card, .booking-card, .admin-panel, .appt-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-l);
+}
+
+.login__title, .report-card__title, .booking-card__title,
+.doctor-dashboard__title, .admin-dashboard__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: var(--space-s);
+}
+
+.login__subtitle, .report-card__subtitle, .booking-card__subtitle,
+.doctor-dashboard__subtitle, .admin-dashboard__subtitle {
+  color: var(--text-soft);
+  margin-bottom: var(--space-l);
+}
+
+.admin-panel__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.admin-panel__subtitle {
+  color: var(--text-soft);
+  margin-bottom: var(--space-m);
+}
+
+@media (max-width: 600px) {
+  .login__card, .report-card, .booking-card, .admin-panel {
+    padding: var(--space-m);
+  }
+}
