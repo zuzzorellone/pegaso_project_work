@@ -1,0 +1,129 @@
+@import './variables.css';
+
+.booking-alert {
+  margin-bottom: var(--space-m);
+}
+
+.booking-submit-error {
+  margin-top: var(--space-m);
+}
+
+.booking-stepper {
+  margin-bottom: var(--space-l);
+}
+
+.booking-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.booking-dept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-m);
+}
+
+.booking-dept-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-m);
+  cursor: pointer;
+}
+
+.booking-dept-card:hover {
+  border-color: var(--blue);
+}
+
+.booking-dept-card--selected {
+  border: 2px solid var(--blue);
+  background-color: var(--blue-light);
+}
+
+.booking-dept-card__name {
+  font-weight: 600;
+  margin-bottom: var(--space-s);
+}
+
+.booking-dept-card__meta {
+  color: var(--text-soft);
+  font-size: 0.875rem;
+}
+
+.booking-step__date {
+  align-self: center;
+}
+
+.booking-time-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+}
+
+.booking-time-chip {
+  border: 1px solid var(--border);
+  background-color: var(--white);
+}
+
+.booking-time-chip:hover {
+  background-color: var(--blue-light);
+}
+
+.booking-time-chip--selected,
+.booking-time-chip--selected:hover,
+.booking-time-chip--selected.Mui-focusVisible {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.booking-time-empty {
+  color: var(--text-soft);
+}
+
+.booking-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-m);
+  border-radius: var(--radius);
+  background-color: var(--blue-light);
+}
+
+.booking-summary__item {
+  color: var(--text-soft);
+}
+
+.booking-summary__item--strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.booking-form__row {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.booking-form__row > * {
+  flex: 1;
+}
+
+.booking-step__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-m);
+  margin-top: var(--space-m);
+}
+
+.booking-step__actions--split {
+  justify-content: space-between;
+}
+
+.booking-dialog__title {
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .booking-form__row {
+    flex-direction: column;
+  }
+}
