@@ -1,0 +1,15 @@
+@import './variables.css';
+
+.report-alert {
+  margin-bottom: var(--space-m);
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.report-form__submit {
+  padding: 10px;
+}
